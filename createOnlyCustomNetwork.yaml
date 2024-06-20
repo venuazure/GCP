@@ -1,0 +1,7 @@
+name: organizations/ORGANIZATION_ID/customConstraints/custom.createOnlyCustomNetwork
+resource_types: compute.googleapis.com/Network
+condition: "resource.autoCreateSubnetworks == false"
+action_type: ALLOW
+method_types: CREATE
+display_name: Restrict creation of networks to custom mode networks
+description: Only custom mode networks allowed.

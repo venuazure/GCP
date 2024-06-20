@@ -1,0 +1,4 @@
+      name: projects/PROJECT_ID/policies/custom.onlyCustomNetwork
+      spec:
+        rules:
+        – enforce: true

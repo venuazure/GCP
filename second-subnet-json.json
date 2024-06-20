@@ -1,0 +1,20 @@
+{
+    "autoCreateSubnetworks": false,
+    "creationTimestamp": "2024-06-18T17:49:54.365-07:00",
+    "description": "test",
+    "enableUlaInternalIpv6": true,
+    "id": "4167254500934915549",
+    "internalIpv6Range": "fd20:405:337:0:0:0:0:0/48",
+    "kind": "compute#network",
+    "mtu": 1460,
+    "name": "second-vpc-vijay",
+    "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL",
+    "routingConfig": {
+        "routingMode": "REGIONAL"
+    },
+    "selfLink": "projects/datascience-dev-425204/global/networks/second-vpc-vijay",
+    "selfLinkWithId": "https://www.googleapis.com/compute/beta/projects/datascience-dev-425204/global/networks/4167254500934915549",
+    "subnetworks": [
+        "projects/datascience-dev-425204/regions/asia-east1/subnetworks/frist"
+    ]
+}

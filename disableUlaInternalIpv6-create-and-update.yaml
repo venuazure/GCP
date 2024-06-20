@@ -1,0 +1,10 @@
+name: organizations/504421690931/customConstraints/custom.disableUlaInternalIpv6
+resource_types: compute.googleapis.com/Network
+method_types:
+  - CREATE
+condition: resource.enableUlaInternalIpv6 == true
+action_type: DENY
+display_name: disableUlaInternalIpv6
+description: >-
+  Each VPC contains a VPC network ULA Internal IPV6 range flag. This should
+  always set to be disabled.
