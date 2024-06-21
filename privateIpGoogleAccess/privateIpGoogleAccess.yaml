@@ -1,0 +1,15 @@
+name: organizations/504421690931/customConstraints/custom.privateIpGoogleAccess
+resource_types: compute.googleapis.com/Subnetwork
+method_types:
+  - CREATE
+  - UPDATE
+condition: resource.privateIpGoogleAccess == true
+action_type: ALLOW
+display_name: privateIpGoogleAccess
+description: >-
+  privateIpGoogleAccess
+
+
+
+ 
+  
