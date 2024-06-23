@@ -1,0 +1,8 @@
+name: organizations/504421690931/customConstraints/custom.FlowlogsEnableOne
+resource_types: compute.googleapis.com/Subnetwork
+method_types:
+  - CREATE
+condition: resource.logConfig.enable == true
+action_type: ALLOW
+display_name: enableFlowLogs
+description: enableFlowLogs
