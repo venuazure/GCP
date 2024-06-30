@@ -1,0 +1,8 @@
+name: organizations/504421690931/customConstraints/custom.Lessthan20 
+resource_types: compute.googleapis.com/Subnetwork 
+method_types: 
+- CREATE 
+condition: >- resource.ipCidrRange.matches(r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/(2[1-9]|[3-9]\d|\d{3,})$') 
+action_type: DENY 
+display_name: Lessthan20 
+description: ''
