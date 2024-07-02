@@ -1,0 +1,27 @@
+import re
+
+# Modified regex pattern
+
+pattern = (r'/([2-9]\d|1[0-9]\d|[1-9]\d{2,})$')
+
+def matches_ip_cidr_range(ip_cidr):
+    return re.match(pattern, ip_cidr) is not None
+
+# Test cases with CIDR greater than 20 and less than or equal to 32
+test_cases = [
+    "192.168.1.1/21",   # Valid
+    "10.0.0.1/32",      # Valid
+    "172.16.0.0/30",    # Valid
+    "192.168.1.1/20",   # Invalid (CIDR <= 20)
+    "192.168.1.1/31",   # Valid
+    "192.168.1.1/25",   # Valid
+    "256.256.256.256/30", # Invalid (IP octet > 255)
+    "192.168.1/24",     # Invalid (incomplete IP)
+    "192.168.1.1/8",    # Invalid (CIDR <= 20)
+    "192.168.1.1/",     # Invalid (no CIDR)
+    "192.168.1.1/29",   # Valid
+]
+
+for case in test_cases:
+    result = matches_ip_cidr_range(case)
+    print(f"'{case}': {'Valid' if result else 'Invalid'}")
